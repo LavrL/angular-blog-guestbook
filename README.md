@@ -1,3 +1,3 @@
-# AngularBlogGuestbook
+# Angular Blog with Guestbook
 
-Demo 
+Demo netlify - https://angular-blog-guestbook.netlify.app/
