@@ -1,7 +1,8 @@
-import { BlogComponent } from './blog/blog.component';
+// import { BlogComponent } from './blog/blog.component';
 import { GuestbookComponent } from './guestbook/guestbook.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlogPostListComponent } from './blog/blog-post-list/blog-post-list.component';
 
 const appRoutes: Routes = [
     {
@@ -11,7 +12,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'blog',
-        component: BlogComponent
+        component: BlogPostListComponent
     },
     {
         path: 'guestbook',
