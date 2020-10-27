@@ -1,8 +1,9 @@
-// import { BlogComponent } from './blog/blog.component';
 import { GuestbookComponent } from './guestbook/guestbook.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { BlogPostFullComponent } from './blog/blog-post-full/blog-post-full.component';
 import { BlogPostListComponent } from './blog/blog-post-list/blog-post-list.component';
+import { PostResolver } from './blog/shared/post-list.resolver';
+import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
     {
@@ -18,9 +19,9 @@ const appRoutes: Routes = [
         path: 'guestbook',
         component: GuestbookComponent
     },
-    {
-        path: '**', redirectTo: '/blog'
-    }
+    // {
+    //     path: '**', redirectTo: '/blog'
+    // }
 ];
 
 @NgModule({

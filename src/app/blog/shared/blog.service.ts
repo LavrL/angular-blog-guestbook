@@ -10,9 +10,14 @@ import { map } from 'rxjs/operators';
 export class BlogService {
     private baseURL = 'https://my-json-server.typicode.com/LavrL/angular-blog-guestbook';
 
-    constructor(private http: HttpClient) {};
+    constructor(private http: HttpClient) { };
 
     public getAllPosts(): Observable<BlogPost[]> {
         return this.http.get<BlogPost[]>(this.baseURL + '/posts');
+    }
+
+    public getPostById(id: string): Observable<BlogPost> {
+        console.log('ID = ', id);
+        return this.http.get<BlogPost>(this.baseURL + '/posts/' + id);
     }
 }

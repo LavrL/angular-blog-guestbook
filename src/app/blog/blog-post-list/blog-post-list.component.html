@@ -1,1 +1,5 @@
-<p>blog-post-list works!</p>
+<app-blog-post  *ngFor="let post of blogAllPost | async" 
+  [postBody]="post.body" 
+  [postTitle]="post.title" 
+  [postId]="post.id">
+</app-blog-post>

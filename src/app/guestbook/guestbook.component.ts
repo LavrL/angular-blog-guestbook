@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-guestbook',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './guestbook.component.html',
   styleUrls: ['./guestbook.component.scss']
 })
