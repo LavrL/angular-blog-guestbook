@@ -16,6 +16,7 @@ export class BlogPostListComponent implements OnInit {
 
   ngOnInit(): void {
     this.blogAllPost = this.blogService.getAllPosts();
+    //console.log(this.blogService.getCommentNumberByPostId('1').subscribe(c => console.log(c)));
   }
 
 }

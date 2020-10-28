@@ -2,6 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { pluck } from 'rxjs/operators';
+//import { BlogPost } from '../shared/blog.model';
 
 @Component({
   selector: 'app-blog-post-full',
@@ -17,6 +18,7 @@ export class BlogPostFullComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
   }
 
 }
