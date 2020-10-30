@@ -14,18 +14,18 @@ export class BlogPostComponent implements OnInit {
   @Input() public postTitle: string;
   @Input() public postId: string;
   public blogCommentNumberPerPost: Observable<number>
-  public blogComments:Observable<BlogPost[]>;
-  public isShown: boolean = false;
+  public blogComments: Observable<BlogPost[]>;
+  public isShown = false;
 
   constructor(private blogService: BlogService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     console.log('IDs == ', this.postId);
     this.blogCommentNumberPerPost = this.blogService.getCommentNumberByPostId(this.postId);
     this.blogComments = this.blogService.getCommentsById(this.postId);
   }
 
-  showComments(): void {
+  public showComments(): void {
     this.isShown = !this.isShown;
   }
 

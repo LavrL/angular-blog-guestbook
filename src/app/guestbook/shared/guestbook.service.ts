@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GuestbookService {
-  public guestBook: Array<GuestBook> = [];
+  public guestBook: GuestBook[] = [];
 
-  addNewEntry(guestBook: GuestBook): void {
+  public addNewEntry(guestBook: GuestBook): void {
     this.guestBook.push(guestBook);
   }
 }

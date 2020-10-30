@@ -6,11 +6,8 @@ import { GuestbookService } from '../shared/guestbook.service';
   templateUrl: './guestbook-display-posts.component.html',
   styleUrls: ['./guestbook-display-posts.component.scss']
 })
-export class GuestbookDisplayPostsComponent implements OnInit {
+export class GuestbookDisplayPostsComponent {
   public guestBookPosts = this.gs.guestBook;
 
   constructor(public gs: GuestbookService) { }
-
-  ngOnInit(): void {}
-
 }

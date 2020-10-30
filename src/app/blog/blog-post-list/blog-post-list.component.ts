@@ -14,9 +14,8 @@ export class BlogPostListComponent implements OnInit {
 
   constructor(private blogService: BlogService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.blogAllPost = this.blogService.getAllPosts();
-    //console.log(this.blogService.getCommentNumberByPostId('1').subscribe(c => console.log(c)));
   }
 
 }

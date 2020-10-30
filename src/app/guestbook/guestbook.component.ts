@@ -5,26 +5,28 @@ import { GuestbookService } from './shared/guestbook.service';
 
 @Component({
   selector: 'app-guestbook',
-  //changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './guestbook.component.html',
   styleUrls: ['./guestbook.component.scss']
 })
 export class GuestbookComponent implements OnInit {
-  public guestBook: Array<GuestBook> = [];
-  addForm: FormGroup;
+  public guestBook: GuestBook[] = [];
+  public addForm: FormGroup;
 
-  constructor(public fb: FormBuilder, public gs: GuestbookService) { }
+  constructor(private fb: FormBuilder, private gs: GuestbookService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.addForm = this.fb.group({
       author: ['', Validators.required],
       message: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
 
-  addEntry() {
-    if (this.addForm.valid) this.gs.addNewEntry(this.addForm.value);
-    //console.log('guestBookPosts = ', this.guestBookPosts);
+  public addEntry(): void {
+    if (this.addForm.valid) {
+      this.gs.addNewEntry(this.addForm.value);
+      this.addForm.reset();
+    }
   }
 
 }

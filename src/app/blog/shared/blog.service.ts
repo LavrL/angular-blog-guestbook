@@ -23,13 +23,13 @@ export class BlogService {
 
     public getCommentsById(id: string): Observable<BlogPost[]> {
         return this.http.get<BlogPost[]>(this.baseURL + '/comments').pipe(
-            map((com: BlogPost[]) => com.filter(com => com.id == id))
+            map((com: BlogPost[]) => com.filter(comment => comment.id == id))
         )
     }
 
     public getCommentNumberByPostId(id: string): Observable<number> {
         return this.http.get<BlogPost[]>(this.baseURL + '/comments').pipe(
-            map((com: BlogPost[]) => com.filter(com => com.id == id).length)
+            map((com: BlogPost[]) => com.filter(comment => comment.id == id).length)
         );
     }
 }
