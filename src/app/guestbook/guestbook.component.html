@@ -1,1 +1,14 @@
-<p>guestbook works!</p>
+<h3 class="guestBook-header">Guestbook</h3>
+<div>
+    <form [formGroup]="addForm" (submit)="addEntry()" class="guestBook-form">
+
+        <label for="">Author</label>
+        <input type="text" formControlName="author">
+
+        <label for="">Message</label>
+        <input type="text" formControlName="message">
+
+        <button mat-raised-button color="primary"> Add new entry</button>
+    </form>
+    <app-guestbook-display-posts></app-guestbook-display-posts>
+</div>

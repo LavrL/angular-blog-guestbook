@@ -1,0 +1,6 @@
+<ul *ngIf="guestBookPosts.length > 0">
+    <li *ngFor="let guestBookPost of guestBookPosts">
+        <p>{{ guestBookPost.author }}</p>
+        <p>{{ guestBookPost.message }}</p>
+    </li>
+</ul>

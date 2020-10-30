@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { GuestbookComponent } from './guestbook/guestbook.component';
+import { GuestbookModule } from './guestbook/guestbook.module';
 import { LayoutModule } from '../app/layout/layout.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -22,14 +22,15 @@ import { RouterModule } from '@angular/router';
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    FormsModule,
-    LayoutModule,
     BlogModule,
     BlogRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    GuestbookModule,
+    LayoutModule,
     RouterModule.forRoot([])
   ],
   providers: [],
