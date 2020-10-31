@@ -1,12 +1,17 @@
 <h3 class="guestBook-header">Guestbook</h3>
 <div>
-    <form [formGroup]="addForm" (submit)="addEntry()" class="guestBook-form">
+    <form [formGroup]="addForm" (ngSubmit)="addEntry()" class="guestBook-form">
 
         <label for="">Author</label>
-        <input type="text" formControlName="author">
+        <!-- <input type="text" formControlName="author" class="guestBook-inputField"/> -->
+        <input type="text" formControlName="author" class="guestBook-inputField"
+            [ngClass]="{ 'ng-invalid': submitted && f.author.errors }" />
+        <div *ngIf="submitted && f.author.errors" class="invalid-feedback">
+            <div *ngIf="f.author.errors.required">Title is required</div>
+        </div>
 
         <label for="">Message</label>
-        <input type="text" formControlName="message">
+        <input type="text" formControlName="message" class="guestBook-inputField" />
 
         <button mat-raised-button color="primary"> Add new entry</button>
     </form>

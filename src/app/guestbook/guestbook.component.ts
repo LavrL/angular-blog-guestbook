@@ -12,21 +12,28 @@ import { GuestbookService } from './shared/guestbook.service';
 export class GuestbookComponent implements OnInit {
   public guestBook: GuestBook[] = [];
   public addForm: FormGroup;
+  public submitted = false;
 
   constructor(private fb: FormBuilder, private gs: GuestbookService) { }
 
   public ngOnInit(): void {
     this.addForm = this.fb.group({
-      author: ['', Validators.required],
+      author: ['', [Validators.required, Validators.minLength(2)]],
       message: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
+  get f() { return this.addForm.controls; }
 
   public addEntry(): void {
     if (this.addForm.valid) {
+      this.submitted = true;
+      console.log('submitted = ', this.submitted);
       this.gs.addNewEntry(this.addForm.value);
       this.addForm.reset();
     }
+    // console.log(this.addForm.controls.v)
+    this.submitted = false;
+    console.log('submitted = ', this.submitted);
   }
 
 }
