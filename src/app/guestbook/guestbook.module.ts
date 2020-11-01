@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GuestbookComponent } from './guestbook.component';
 import { MatButtonModule } from '@angular/material/button';
 import { GuestbookDisplayPostsComponent } from './guestbook-display-posts/guestbook-display-posts.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { GuestbookDisplayPostsComponent } from './guestbook-display-posts/guestb
     BrowserModule,
     FormsModule,
     MatButtonModule,
+    MatCardModule,
     ReactiveFormsModule
   ],
   exports: [

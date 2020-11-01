@@ -1,19 +1,19 @@
-<h3 class="guestBook-header">Guestbook</h3>
-<div>
-    <form [formGroup]="addForm" (ngSubmit)="addEntry()" class="guestBook-form">
+<h1 class="guestBook-header">Guestbook</h1>
+<form [formGroup]="addForm" (ngSubmit)="addEntry()" class="guestBook-form">
 
-        <label for="">Author</label>
-        <!-- <input type="text" formControlName="author" class="guestBook-inputField"/> -->
-        <input type="text" formControlName="author" class="guestBook-inputField"
-            [ngClass]="{ 'ng-invalid': submitted && f.author.errors }" />
-        <div *ngIf="submitted && f.author.errors" class="invalid-feedback">
-            <div *ngIf="f.author.errors.required">Title is required</div>
-        </div>
+    <label for="">Author</label>
+    <input type="text" formControlName="author" class="guestBook-inputField"
+        [ngClass]="{ 'is-invalid': submitted && f.author.errors }" />
+    <div *ngIf="submitted && f.author.errors" class="invalid-feedback">
+        Title is required.
+    </div>
 
-        <label for="">Message</label>
-        <input type="text" formControlName="message" class="guestBook-inputField" />
+    <label for="">Message</label>
+    <textarea cols="35" rows="12" maxlength="260" formControlName="message" class="guestBook-inputField"></textarea>
+    <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+        Message is required (min length 5 symbols).
+    </div>
 
-        <button mat-raised-button color="primary"> Add new entry</button>
-    </form>
-    <app-guestbook-display-posts></app-guestbook-display-posts>
-</div>
+    <button mat-raised-button color="primary" class="guestBook-add-button"> Add new entry</button>
+</form>
+<app-guestbook-display-posts></app-guestbook-display-posts>

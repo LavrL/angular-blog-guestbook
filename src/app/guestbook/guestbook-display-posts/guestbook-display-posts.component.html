@@ -1,6 +1,10 @@
 <ul *ngIf="guestBookPosts.length > 0">
-    <li *ngFor="let guestBookPost of guestBookPosts">
-        <p>{{ guestBookPost.author }}</p>
-        <p>{{ guestBookPost.message }}</p>
+
+    <li *ngFor="let guestBookPost of guestBookPosts" class="guestBook-post">
+        <mat-card>
+            <mat-card-content>Author: {{ guestBookPost.author }}</mat-card-content>
+            <mat-card-content>Message: {{ guestBookPost.message }}</mat-card-content>
+        </mat-card>
     </li>
+
 </ul>

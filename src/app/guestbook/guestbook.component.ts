@@ -18,22 +18,21 @@ export class GuestbookComponent implements OnInit {
 
   public ngOnInit(): void {
     this.addForm = this.fb.group({
-      author: ['', [Validators.required, Validators.minLength(2)]],
+      author: ['', Validators.required],
       message: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
+
   get f() { return this.addForm.controls; }
 
   public addEntry(): void {
+    this.submitted = true;
+    console.log('submitted = ', this.submitted);
     if (this.addForm.valid) {
-      this.submitted = true;
-      console.log('submitted = ', this.submitted);
       this.gs.addNewEntry(this.addForm.value);
       this.addForm.reset();
+      this.submitted = false;
     }
-    // console.log(this.addForm.controls.v)
-    this.submitted = false;
-    console.log('submitted = ', this.submitted);
   }
 
 }
