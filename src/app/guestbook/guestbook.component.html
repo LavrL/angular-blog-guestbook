@@ -5,7 +5,7 @@
     <input type="text" formControlName="author" class="guestBook-inputField"
         [ngClass]="{ 'is-invalid': submitted && f.author.errors }" />
     <div *ngIf="submitted && f.author.errors" class="invalid-feedback">
-        Title is required.
+        Author is required.
     </div>
 
     <label for="">Message</label>
