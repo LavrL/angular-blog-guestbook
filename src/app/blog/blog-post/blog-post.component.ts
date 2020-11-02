@@ -20,7 +20,6 @@ export class BlogPostComponent implements OnInit {
   constructor(private blogService: BlogService) { }
 
   public ngOnInit(): void {
-    console.log('IDs == ', this.postId);
     this.blogCommentNumberPerPost = this.blogService.getCommentNumberByPostId(this.postId);
     this.blogComments = this.blogService.getCommentsById(this.postId);
   }

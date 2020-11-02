@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GuestBook } from './shared/guestbook.model';
 import { GuestbookService } from './shared/guestbook.service';
 
@@ -25,7 +25,7 @@ export class GuestbookComponent implements OnInit {
 
   get f() { return this.addForm.controls; }
 
-  public addEntry(): void {
+  public onAddEntry(): void {
     this.submitted = true;
     console.log('submitted = ', this.submitted);
     if (this.addForm.valid) {

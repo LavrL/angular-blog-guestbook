@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { GuestbookModule } from '../guestbook.module';
 
 @Component({
   selector: 'app-guestbook-modal',
@@ -12,18 +11,18 @@ export class GuestbookModalComponent implements OnInit {
   public name:string;
 
   constructor(private dialogRef: MatDialogRef<GuestbookModalComponent>,
-    @Inject(MAT_DIALOG_DATA) private data: { name: string }) {
+    @Inject(MAT_DIALOG_DATA) public data: { name: string }) {
     this.name = data.name;
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
-  onCancel(): void {
+  public onCancel(): void {
     this.dialogRef.close()
   }
 
-  onSubmit(): void {
+  public onSubmit(): void {
     this.dialogRef.close();
   }
 

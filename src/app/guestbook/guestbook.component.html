@@ -1,5 +1,5 @@
 <h1 class="guestBook-header">Guestbook</h1>
-<form [formGroup]="addForm" (ngSubmit)="addEntry()" class="guestBook-form">
+<form [formGroup]="addForm" (ngSubmit)="onAddEntry()" class="guestBook-form">
 
     <label for="">Author</label>
     <input type="text" formControlName="author" class="guestBook-inputField"

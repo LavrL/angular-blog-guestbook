@@ -13,8 +13,7 @@ export class GuestbookDisplayPostsComponent {
 
   constructor(public gs: GuestbookService, private dialog: MatDialog) { }
 
-  openModal(authorName: string) {
-    console.log('authorName = ', authorName);
+  public openModal(authorName: string): void {
     const dialogRef = this.dialog.open(GuestbookModalComponent,
       {
         width: '350px',
