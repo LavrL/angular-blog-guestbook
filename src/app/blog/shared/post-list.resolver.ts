@@ -13,7 +13,6 @@ export class PostResolver implements Resolve<BlogPost> {
     constructor(private blogService: BlogService) { }
 
     public resolve(route: ActivatedRouteSnapshot): Observable<BlogPost> {
-        console.log('route Id = ', route.paramMap.get('id'));
         return this.blogService.getPostById(route.paramMap.get('id')).pipe(take(1));
     }
 }

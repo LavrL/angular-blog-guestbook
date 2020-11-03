@@ -17,7 +17,6 @@ export class BlogService {
     }
 
     public getPostById(id: string): Observable<BlogPost> {
-        console.log('ID = ', id);
         return this.http.get<BlogPost>(this.baseURL + '/posts/' + id);
     }
 

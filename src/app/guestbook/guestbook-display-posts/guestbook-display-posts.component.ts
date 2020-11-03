@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { GuestbookModalComponent } from '../guestbook-modal/guestbook-modal.component';
 import { GuestbookService } from '../shared/guestbook.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-guestbook-display-posts',
   templateUrl: './guestbook-display-posts.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./guestbook-display-posts.component.scss']
 })
 export class GuestbookDisplayPostsComponent {

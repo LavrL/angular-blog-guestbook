@@ -23,11 +23,10 @@ export class GuestbookComponent implements OnInit {
     });
   }
 
-  get f() { return this.addForm.controls; }
+  public get f(): { [key: string]: AbstractControl } { return this.addForm.controls; }
 
   public onAddEntry(): void {
     this.submitted = true;
-    console.log('submitted = ', this.submitted);
     if (this.addForm.valid) {
       this.gs.addNewEntry(this.addForm.value);
       this.addForm.reset();

@@ -1,9 +1,10 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-guestbook-modal',
   templateUrl: './guestbook-modal.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./guestbook-modal.component.scss']
 })
 export class GuestbookModalComponent implements OnInit {

@@ -1,5 +1,6 @@
-<div *ngIf="blogAllPost$ | async">
+<div *ngIf="(blogAllPost$ | async); else noPosts">
   <app-blog-post *ngFor="let post of blogAllPost$ | async" [postBody]="post.body" [postTitle]="post.title"
     [postId]="post.id">
   </app-blog-post>
 </div>
+<ng-template #noPosts>No posts for this blog.</ng-template> 
