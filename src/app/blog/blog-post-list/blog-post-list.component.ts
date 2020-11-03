@@ -10,12 +10,12 @@ import { BlogPost } from '../shared/blog.model';
   styleUrls: ['./blog-post-list.component.scss']
 })
 export class BlogPostListComponent implements OnInit {
-  public blogAllPost: Observable<BlogPost[]>;
+  public blogAllPost$: Observable<BlogPost[]>;
 
   constructor(private blogService: BlogService) { }
 
   public ngOnInit(): void {
-    this.blogAllPost = this.blogService.getAllPosts();
+    this.blogAllPost$ = this.blogService.getAllPosts();
   }
 
 }

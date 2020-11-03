@@ -18,10 +18,7 @@ const appRoutes: Routes = [
     {
         path: 'guestbook',
         component: GuestbookComponent
-    },
-    // {
-    //     path: '**', redirectTo: '/blog'
-    // }
+    }
 ];
 
 @NgModule({

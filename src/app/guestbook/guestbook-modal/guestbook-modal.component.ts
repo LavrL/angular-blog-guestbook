@@ -8,7 +8,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class GuestbookModalComponent implements OnInit {
 
-  public name:string;
+  public name: string;
 
   constructor(private dialogRef: MatDialogRef<GuestbookModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { name: string }) {

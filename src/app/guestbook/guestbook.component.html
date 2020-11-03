@@ -2,16 +2,26 @@
 <form [formGroup]="addForm" (ngSubmit)="onAddEntry()" class="guestBook-form">
 
     <label for="">Author</label>
-    <input type="text" formControlName="author" class="guestBook-inputField"
-        [ngClass]="{ 'is-invalid': submitted && f.author.errors }" />
+    <input 
+      type="text" 
+      formControlName="author" 
+      class="guestBook-inputField"
+      [ngClass]="{ 'is-invalid': submitted && f.author.errors }" />
     <div *ngIf="submitted && f.author.errors" class="invalid-feedback">
         Author is required.
     </div>
 
     <label for="">Message</label>
-    <textarea cols="35" rows="12" maxlength="260" formControlName="message" class="guestBook-inputField"></textarea>
+    <textarea 
+      cols="35" 
+      rows="12" 
+      maxlength="260" 
+      formControlName="message" 
+      class="guestBook-inputField"
+      [ngClass]="{ 'is-invalid': submitted && f.message.errors }" ></textarea>
     <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
-        Message is required (min length 5 symbols).
+        <div *ngIf="f.message.errors.required">Message is required</div>
+        <div *ngIf="f.message.errors.minlength"> Message is required (min length 5 symbols).</div>
     </div>
 
     <button mat-raised-button color="primary" class="guestBook-add-button"> Add new entry</button>
