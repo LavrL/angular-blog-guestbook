@@ -6,7 +6,6 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-guestbook-display-posts',
   templateUrl: './guestbook-display-posts.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./guestbook-display-posts.component.scss']
 })
 export class GuestbookDisplayPostsComponent {
