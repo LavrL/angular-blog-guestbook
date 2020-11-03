@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  display: block;
+  margin: 0;
+  float: left;
+  padding: 0;
+}
+.blog-post-button-home {
+  margin-bottom: 20px;
+}
+.blog-image {
+  float: left;
+  margin-right: 25px;
+  border: 8px solid white;
+}
+.blog-post {
+  display: flex;
+  flex-direction: column;
+}

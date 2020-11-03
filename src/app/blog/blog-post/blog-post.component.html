@@ -1,0 +1,27 @@
+<mat-card class="blog-post-card-container">
+    <div class="blog-post-image">
+        <img mat-card-image class="imgs"
+            src="https://albertaskydivecentral.com/wp-content/uploads/2019/03/ASC-Icon-Question-Mark.png"
+            alt="Photo of question sign">
+    </div>
+    <div class="blog-post-content">
+        <mat-card-header class="blog-post-header">
+            <mat-card-title>Title: {{postTitle}} </mat-card-title>
+            <mat-card-subtitle>Author - </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p> {{postBody}}</p>
+        </mat-card-content>
+        <mat-card-actions class="blog-post-buttons">
+            <button mat-raised-button color="primary" [routerLink]="['post', postId]">Read more...</button>
+            <button mat-raised-button (click)='showComments()'>Show comments
+                ({{ this.blogCommentNumberPerPost$ |async}})</button>
+        </mat-card-actions>
+        <div *ngIf="isShown">
+            <div *ngFor="let comment of blogComments$ | async">
+                <p>* {{ comment.body }}</p>
+            </div>
+
+        </div>
+    </div>
+</mat-card>

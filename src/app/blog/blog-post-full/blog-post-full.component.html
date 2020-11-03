@@ -1,0 +1,18 @@
+<button mat-fab color="primary" class="blog-post-button-home" [routerLink]="['/blog']">
+    <mat-icon>home</mat-icon>
+</button>
+<div class="container">
+    <div class="blog-image">
+        <img src="https://morrobaybirdfestival.org/wp-content/uploads/2017/09/LandBirds-004-300x300.jpeg" height="200px"
+            width="200px" alt="Picture">
+    </div>
+    <div class="blog-post">
+        <div class="blog-post-header">
+            <h3>Title: {{ this.postTitle$ | async }} </h3>
+            <p>Author - {{ this.postId$ | async }}</p>
+        </div>
+        <mat-card-content>
+            <p> {{ this.postBody$ |async}}</p>
+        </mat-card-content>
+    </div>
+</div>

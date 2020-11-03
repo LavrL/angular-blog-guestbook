@@ -1,0 +1,18 @@
+.guestBook-header {
+  text-align: center;
+}
+.guestBook-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.guestBook-inputField {
+  margin-bottom: 20px;
+}
+div.invalid-feedback {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.guestBook-add-button {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-header {
+  font-size: 16px;
+}
+.modal-button {
+  display: flex;
+}
+.button-cancel {
+  margin-right: 10px;
+}

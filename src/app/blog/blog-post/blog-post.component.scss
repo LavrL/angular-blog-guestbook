@@ -1,0 +1,25 @@
+.blog-post-card-container {
+  margin-bottom: 10px;
+  display: flex;
+}
+.blog-post-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+.imgs {
+  width: 50px;
+  height: 50px;
+}
+.blog-post-buttons {
+  margin-left: 0;
+}
+.blog-post-content {
+  width: 90%;
+}
+::ng-deep .blog-post-header .mat-card-header-text {
+  margin: 0;
+}

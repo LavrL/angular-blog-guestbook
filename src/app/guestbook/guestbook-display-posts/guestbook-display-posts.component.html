@@ -1,0 +1,12 @@
+<ul *ngIf="guestBookPosts.length > 0">
+
+    <li *ngFor="let guestBookPost of guestBookPosts" class="guestBook-post">
+        <mat-card>
+            <mat-card-content>Author: {{ guestBookPost.author }}
+                <button mat-stroked-button color="primary" (click)="openModal(guestBookPost.author)">More info...</button>
+            </mat-card-content>
+            <mat-card-content>Message: {{ guestBookPost.message }}</mat-card-content>
+        </mat-card>
+    </li>
+
+</ul>
