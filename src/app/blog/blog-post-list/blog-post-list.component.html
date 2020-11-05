@@ -1,6 +1,14 @@
+<div class="blog-post-selector">
+  <select [(ngModel)]='field'>
+    <option *ngFor="let field of fields" [value]="field">{{ field }}</option>
+  </select>
+
+  <input (input)='getItems($event)' />
+</div>
+
 <div *ngIf="(blogAllPost$ | async); else noPosts">
   <app-blog-post *ngFor="let post of blogAllPost$ | async" [postBody]="post.body" [postTitle]="post.title"
     [postId]="post.id">
   </app-blog-post>
 </div>
-<ng-template #noPosts>No posts for this blog.</ng-template> 
+<ng-template #noPosts>No posts for this blog.</ng-template>
