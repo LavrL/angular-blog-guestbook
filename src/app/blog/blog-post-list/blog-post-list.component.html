@@ -1,9 +1,14 @@
-<div class="blog-post-selector">
-  <select [(ngModel)]='field'>
-    <option *ngFor="let field of fields" [value]="field">{{ field }}</option>
-  </select>
-
-  <input (input)='getItems($event)' />
+<div class="blog-post-search">
+  <div>Filter By</div>
+  <div class="blog-post-sort-by">
+    <div> Sort By</div>
+    <div class="blog-post-select">
+      <select [(ngModel)]='field' (change)="onChange($event.target.value)">
+        <option *ngFor="let field of fields" [value]="field">{{ field }}</option>
+      </select>
+      <input (input)="getItems($event)" />
+    </div>
+  </div>
 </div>
 
 <div *ngIf="(blogAllPost$ | async); else noPosts">
