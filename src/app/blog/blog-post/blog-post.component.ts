@@ -13,6 +13,7 @@ export class BlogPostComponent implements OnInit {
   @Input() public postBody: string;
   @Input() public postTitle: string;
   @Input() public postId: string;
+  @Input() public postAuthor: string;
   public blogCommentNumberPerPost$: Observable<number>
   public blogComments$: Observable<BlogPost[]>;
   public isShown = false;
