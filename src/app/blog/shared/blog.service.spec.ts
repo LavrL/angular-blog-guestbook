@@ -32,13 +32,11 @@ describe('BlogService', () => {
             }];
 
             service.getAllPosts().subscribe(posts => {
-                console.log('posts = ', posts);
                 expect(posts.length).toBe(1);
                 expect(posts).toEqual(dummyPosts);
             });
 
             const req = httpMock.expectOne('https://my-json-server.typicode.com/LavrL/angular-blog-guestbook/posts')
-            console.log(req.request.method);
             expect(req.request.method).toBe('GET');
             req.flush(dummyPosts);
         });

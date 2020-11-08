@@ -24,7 +24,6 @@ export class BlogPostListComponent implements OnInit {
   }
 
   public onChange(field: string) {
-    console.log('choosed = ', field);
     let direction = this.isDesc ? 1 : -1;
     this.blogAllPost$ = this.blogService.getAllPosts().pipe(
       map(post => post.sort(function (item1, item2) {
