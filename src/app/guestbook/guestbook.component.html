@@ -21,7 +21,7 @@
       [ngClass]="{ 'is-invalid': submitted && f.message.errors }" ></textarea>
     <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
         <div *ngIf="f.message.errors.required">Message is required</div>
-        <div *ngIf="f.message.errors.minlength"> Message is required (min length 5 symbols).</div>
+        <div *ngIf="f.message.errors.minlength"> Message is required (min length 20 symbols).</div>
     </div>
 
     <button mat-raised-button color="primary" class="guestBook-add-button"> Add new entry</button>

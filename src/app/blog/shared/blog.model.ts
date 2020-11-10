@@ -10,12 +10,11 @@ export interface BlogComment {
     body: string
 }
 export interface Searchfield {
-    // [index: number]: string;
-    name: string,
     id?: number
+    name: string
 }
 export enum starRatingColor {
-    primary = "primary",
     accent = "accent",
+    primary = "primary",
     warn = "warn"
 }
