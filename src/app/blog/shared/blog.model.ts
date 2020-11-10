@@ -9,3 +9,13 @@ export interface BlogComment {
     title: string,
     body: string
 }
+export interface Searchfield {
+    // [index: number]: string;
+    name: string,
+    id?: number
+}
+export enum starRatingColor {
+    primary = "primary",
+    accent = "accent",
+    warn = "warn"
+}

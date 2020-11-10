@@ -1,4 +1,4 @@
-import { BlogPost } from '../shared/blog.model';
+import { BlogPost, Searchfield } from '../shared/blog.model';
 import { BlogService } from '../shared/blog.service';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -12,9 +12,22 @@ import { map } from 'rxjs/operators';
 })
 export class BlogPostListComponent implements OnInit {
   public blogAllPost$: Observable<BlogPost[]>;
-  public fields = ['title', 'author', 'id'];
-  public field = this.fields[0];
-  public value = 'Title: Cats';
+  public searchFields: Searchfield[] = [{
+    id: 1,
+    name: 'id'
+  },
+  {
+    id: 2,
+    name: 'author'
+  },
+  {
+    id: 3,
+    name: 'title'
+  }]
+
+  public getDefaultField() { return this.searchFields[0].name; }
+  public searchField = this.getDefaultField();
+
   public isDesc = true;
 
   constructor(private blogService: BlogService) { }
@@ -23,14 +36,14 @@ export class BlogPostListComponent implements OnInit {
     this.blogAllPost$ = this.blogService.getAllPosts();
   }
 
-  public onChange(field: string) {
-    let direction = this.isDesc ? 1 : -1;
+  public onChange(field: string): void {
+    const direction = this.isDesc ? 1 : -1;
     this.blogAllPost$ = this.blogService.getAllPosts().pipe(
-      map(post => post.sort(function (item1, item2) {
-        if (item1[field] < item2[field]) {
+      map(post => post.sort((post1, post2) => {
+        if (post1[field] < post2[field]) {
           return -1 * direction;
         }
-        else if (item1[field] > item2[field]) {
+        else if (post1[field] > post2[field]) {
           return 1 * direction;
         }
         else {
@@ -43,7 +56,7 @@ export class BlogPostListComponent implements OnInit {
     const val = ev.target.value;
     if (val && val.trim() !== '') {
       this.blogAllPost$ = this.blogService.getAllPosts().pipe(
-        map(post => post.filter(p => p[this.field] == val)));
+        map(post => post.filter(p => p[this.searchField] == val)));
     }
     else {
       this.blogAllPost$ = this.blogService.getAllPosts();

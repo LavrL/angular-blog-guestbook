@@ -15,7 +15,13 @@
         <mat-card-actions class="blog-post-buttons">
             <button mat-raised-button color="primary" [routerLink]="['post', postId]">Read more...</button>
             <button mat-raised-button (click)='showComments()'>Show comments
-                ({{ this.blogCommentNumberPerPost$ |async}})</button>
+                ({{ this.blogCommentNumberPerPost$ | async }})</button>
+            <app-star-rating 
+              [rating]="rating" 
+              [starCount]="starCount" 
+              [color]="starColor" 
+              (ratingUpdated)="onRatingChanged($event)">
+            </app-star-rating>
         </mat-card-actions>
         <div *ngIf="isShown">
             <div *ngFor="let comment of blogComments$ | async">
