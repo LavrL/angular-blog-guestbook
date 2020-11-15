@@ -6,8 +6,8 @@
     </div>
     <div class="blog-post-content">
         <mat-card-header class="blog-post-header">
-            <mat-card-title>Title: {{postTitle}} </mat-card-title>
-            <mat-card-subtitle>Author - </mat-card-subtitle>
+            <mat-card-title>{{postTitle}}</mat-card-title>
+            <mat-card-subtitle>{{postAuthor}} </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
             <p> {{postBody}}</p>
@@ -15,7 +15,13 @@
         <mat-card-actions class="blog-post-buttons">
             <button mat-raised-button color="primary" [routerLink]="['post', postId]">Read more...</button>
             <button mat-raised-button (click)='showComments()'>Show comments
-                ({{ this.blogCommentNumberPerPost$ |async}})</button>
+                ({{ this.blogCommentNumberPerPost$ | async }})</button>
+            <app-star-rating 
+              [rating]="rating" 
+              [starCount]="starCount" 
+              [color]="starColor" 
+              (ratingUpdated)="onRatingChanged($event)">
+            </app-star-rating>
         </mat-card-actions>
         <div *ngIf="isShown">
             <div *ngFor="let comment of blogComments$ | async">

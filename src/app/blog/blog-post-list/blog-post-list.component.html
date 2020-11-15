@@ -1,6 +1,19 @@
+<div class="blog-post-search">
+  <div>Filter By</div>
+  <div class="blog-post-sort-by">
+    <div> Sort By</div>
+    <div class="blog-post-select">
+      <select [(ngModel)]='searchField' (change)="onChange($event.target.value)">
+        <option *ngFor="let searchFld of searchFields" [value]="searchFld.name">{{ searchFld.name }}</option>
+      </select>
+      <input (input)="getItems($event)" />
+    </div>
+  </div>
+</div>
+
 <div *ngIf="(blogAllPost$ | async); else noPosts">
   <app-blog-post *ngFor="let post of blogAllPost$ | async" [postBody]="post.body" [postTitle]="post.title"
-    [postId]="post.id">
+    [postId]="post.id" [postAuthor]="post.author">
   </app-blog-post>
 </div>
-<ng-template #noPosts>No posts for this blog.</ng-template> 
+<ng-template #noPosts>No posts for this blog.</ng-template>
