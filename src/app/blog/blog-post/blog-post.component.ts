@@ -24,7 +24,7 @@ export class BlogPostComponent implements OnInit {
 
   constructor(private blogService: BlogService) { }
 
-  onRatingChanged(rating: number): void {
+  public onRatingChanged(rating: number): void {
     this.rating = rating;
   }
 

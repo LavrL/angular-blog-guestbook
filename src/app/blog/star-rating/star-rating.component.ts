@@ -12,19 +12,19 @@ export class StarRatingComponent implements OnInit {
   @Input() public color: string;
   public ratingArr = [];
 
-  @Output() ratingUpdated = new EventEmitter();
+  @Output() public ratingUpdated = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.ratingArr = Array.from(Array(10).keys());
   }
 
-  onClick(rating: number): void {
+  public onClick(rating: number): void {
     this.ratingUpdated.emit(rating);
   }
 
-  showIcon(index: number): string {
+  public showIcon(index: number): string {
     if (this.rating >= index + 1) {
       return 'star';
     } else {

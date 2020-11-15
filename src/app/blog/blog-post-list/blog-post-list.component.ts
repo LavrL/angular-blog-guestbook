@@ -25,12 +25,12 @@ export class BlogPostListComponent implements OnInit {
     name: 'title'
   }]
 
-  public getDefaultField() { return this.searchFields[0].name; }
   public searchField = this.getDefaultField();
-
   public isDesc = true;
 
   constructor(private blogService: BlogService) { }
+
+  public getDefaultField(): string { return this.searchFields[0].name; }
 
   public ngOnInit(): void {
     this.blogAllPost$ = this.blogService.getAllPosts();

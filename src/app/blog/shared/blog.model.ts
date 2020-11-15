@@ -14,7 +14,7 @@ export interface Searchfield {
     name: string
 }
 export enum starRatingColor {
-    accent = "accent",
-    primary = "primary",
-    warn = "warn"
+    accent = 'accent',
+    primary = 'primary',
+    warn = 'warn'
 }
