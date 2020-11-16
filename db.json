@@ -28,17 +28,17 @@
         {
             "id": 1,
             "title": "Comment about Dogs",
-            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+            "body": "A dog is the only thing on earth that loves you more than he loves himself."
         },
         {
             "id": 2,
             "title": "Comment about Cats",
-            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+            "body": "Dogs have owners, cats have staff."
         },
         {
             "id": 3,
             "title": "Comments about Horses",
-            "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+            "body": "Courage is being scared to death and saddling up anyway."
         }
     ]
 }
