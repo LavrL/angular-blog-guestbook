@@ -2,7 +2,6 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogPostFullComponent } from './blog-post-full/blog-post-full.component';
 import { BlogPostListComponent } from './blog-post-list/blog-post-list.component';
 import { BlogRoutingModule } from './blog-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +13,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 
-
 @NgModule({
   declarations: [
     BlogPostComponent,
@@ -24,7 +22,6 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
   ],
   imports: [
     BlogRoutingModule,
-    BrowserModule,
     CommonModule,
     FormsModule,
     HttpClientModule,
