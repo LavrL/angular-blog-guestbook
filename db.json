@@ -4,7 +4,7 @@
             "id": 1,
             "title": "Dogs",
             "author": "John",
-            "img": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "imgURL": "https://thumbs.dreamstime.com/b/golden-retriever-puppy-2-months-old-sitting-25518619.jpg",
             "imgAlt": "Dog's picture",
             "body": "The Farne Islands are a cluster of flat-topped rocks protruding just above the skin of the North Sea a few miles off the coast of Northumberland. So close to the surface of the waves are they that they barely make an impression against the horizon and some of the islets only get to feel the wind on their kelp-coated shores at low tide. Yet, they are just high enough to provide many thousands of seabirds with the narrow ledges they need to breed each year and the summertime spectacle of all these clouds of rushing bodies making raucous noises and pungent odours is one never forgotten. \r\n My friend John and I made the long journey up the M1 on Saturday morning to make our second visit to these celebrated islands, as well as our first visit to Coquet Island – a small circle of rock a bit further south which is the main UK breeding site for Roseate Terns; a pretty but rare seabird that neither of us had ever seen before. Although landing on Coquet is prohibited, a boat tour from the town of Amble sails around the island and gets close enough to view the many terns, Puffins and Fulmars that nest there."
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "title": "Cats",
             "author": "Mike",
-            "img": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "imgURL": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
             "imgAlt": "Cat's picture",
             "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "title": "Horses",
             "author": "Alex",
-            "img": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "imgURL": "https://i.pinimg.com/originals/a0/88/2e/a0882e7656a66f985f531fe1aad228e7.jpg",
             "imgAlt": "Horses's picture",
             "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
         }
