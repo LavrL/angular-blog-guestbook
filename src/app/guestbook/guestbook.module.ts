@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GuestbookComponent } from './guestbook.component';
 import { GuestbookDisplayPostsComponent } from './guestbook-display-posts/guestbook-display-posts.component';
@@ -7,6 +6,15 @@ import { GuestbookModalComponent } from './guestbook-modal/guestbook-modal.compo
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: GuestbookComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -15,12 +23,13 @@ import { MatDialogModule } from '@angular/material/dialog';
     GuestbookModalComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     GuestbookComponent
