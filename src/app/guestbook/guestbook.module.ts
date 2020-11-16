@@ -1,20 +1,13 @@
-import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GuestbookComponent } from './guestbook.component';
 import { GuestbookDisplayPostsComponent } from './guestbook-display-posts/guestbook-display-posts.component';
 import { GuestbookModalComponent } from './guestbook-modal/guestbook-modal.component';
+import { GuestbookRoutingModule } from './guestbook-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
-import { RouterModule, Routes } from '@angular/router';
-import { CommonModule } from '@angular/common';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: GuestbookComponent
-  }
-];
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -29,7 +22,7 @@ const routes: Routes = [
     MatCardModule,
     MatDialogModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    GuestbookRoutingModule
   ],
   exports: [
     GuestbookComponent
