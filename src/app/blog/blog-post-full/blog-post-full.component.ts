@@ -12,7 +12,8 @@ import { pluck } from 'rxjs/operators';
 export class BlogPostFullComponent {
   public postBody$: Observable<string> = this.activatedRoute.data.pipe(pluck('post', 'body'));;
   public postTitle$: Observable<string> = this.activatedRoute.data.pipe(pluck('post', 'title'));;
-  public postId$: Observable<string> = this.activatedRoute.data.pipe(pluck('post', 'id'));;
+  public postAuthor$: Observable<string> = this.activatedRoute.data.pipe(pluck('post', 'author'));;
+  public postURL$: Observable<string> = this.activatedRoute.data.pipe(pluck('post', 'imgURL'));;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

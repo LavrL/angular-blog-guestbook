@@ -28,6 +28,8 @@ describe('BlogService', () => {
                 id: '1',
                 title: 'Dog',
                 author: 'John',
+                imgURL: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                imgAlt: 'Dog\'s picture',
                 body: 'some texts go here'
             }];
 

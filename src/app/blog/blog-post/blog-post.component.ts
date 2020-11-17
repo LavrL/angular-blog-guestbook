@@ -14,6 +14,8 @@ export class BlogPostComponent implements OnInit {
   @Input() public postTitle: string;
   @Input() public postId: string;
   @Input() public postAuthor: string;
+  @Input() public postImgURL: string;
+  @Input() public postImgAlt: string;
 
   public blogCommentNumberPerPost$: Observable<number>;
   public blogComments$: Observable<BlogPost[]>;
@@ -32,6 +34,7 @@ export class BlogPostComponent implements OnInit {
     this.blogCommentNumberPerPost$ = this.blogService.getCommentNumberByPostId(this.postId);
     this.blogComments$ = this.blogService.getCommentsById(this.postId);
     this.onRatingChanged(this.rating);
+    console.log('postImgURL = ', this.postImgURL);
   }
 
   public showComments(): void {

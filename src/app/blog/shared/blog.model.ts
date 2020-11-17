@@ -2,6 +2,8 @@ export interface BlogPost {
     id?: string,
     title: string,
     author: string,
+    imgURL: string,
+    imgAlt: string,
     body: string
 }
 export interface BlogComment {
