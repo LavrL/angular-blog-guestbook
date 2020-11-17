@@ -4,18 +4,24 @@
             "id": 1,
             "title": "Dogs",
             "author": "John",
+            "imgURL": "https://thumbs.dreamstime.com/b/golden-retriever-puppy-2-months-old-sitting-25518619.jpg",
+            "imgAlt": "Dog's picture",
             "body": "The Farne Islands are a cluster of flat-topped rocks protruding just above the skin of the North Sea a few miles off the coast of Northumberland. So close to the surface of the waves are they that they barely make an impression against the horizon and some of the islets only get to feel the wind on their kelp-coated shores at low tide. Yet, they are just high enough to provide many thousands of seabirds with the narrow ledges they need to breed each year and the summertime spectacle of all these clouds of rushing bodies making raucous noises and pungent odours is one never forgotten. \r\n My friend John and I made the long journey up the M1 on Saturday morning to make our second visit to these celebrated islands, as well as our first visit to Coquet Island – a small circle of rock a bit further south which is the main UK breeding site for Roseate Terns; a pretty but rare seabird that neither of us had ever seen before. Although landing on Coquet is prohibited, a boat tour from the town of Amble sails around the island and gets close enough to view the many terns, Puffins and Fulmars that nest there."
         },
         {
             "id": 2,
             "title": "Cats",
             "author": "Mike",
+            "imgURL": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "imgAlt": "Cat's picture",
             "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
         },
         {
             "id": 3,
             "title": "Horses",
             "author": "Alex",
+            "imgURL": "https://i.pinimg.com/originals/a0/88/2e/a0882e7656a66f985f531fe1aad228e7.jpg",
+            "imgAlt": "Horses's picture",
             "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
         }
     ],
@@ -23,24 +29,22 @@
         {
             "id": 1,
             "title": "Comment about Dogs",
-            "img": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "imgAlt": "Dog's picture",
-            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            "body": "Dogs teach us a very important lesson in life: The mail man is not to be trusted!"
         },
         {
             "id": 1,
             "title": "Comment about Dogs",
-            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+            "body": "A dog is the only thing on earth that loves you more than he loves himself."
         },
         {
             "id": 2,
             "title": "Comment about Cats",
-            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+            "body": "Dogs have owners, cats have staff."
         },
         {
             "id": 3,
             "title": "Comments about Horses",
-            "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+            "body": "Courage is being scared to death and saddling up anyway."
         }
     ]
 }
