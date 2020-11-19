@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { GuestBook } from './shared/guestbook.model';
-import { GuestbookService } from './shared/guestbook.service';
+import { GuestBookState } from './shared/guestbook.reducer';
+import { Store } from '@ngrx/store';
+import { addNewMessage } from './shared/guestbook.action';
 
 @Component({
   selector: 'app-guestbook',
@@ -14,12 +16,12 @@ export class GuestbookComponent implements OnInit {
   public addForm: FormGroup;
   public submitted = false;
 
-  constructor(private fb: FormBuilder, private gs: GuestbookService) { }
+  constructor(private fb: FormBuilder, private store: Store<GuestBookState>) { }
 
   public ngOnInit(): void {
     this.addForm = this.fb.group({
       author: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(20)]]
+      message: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
 
@@ -28,7 +30,8 @@ export class GuestbookComponent implements OnInit {
   public onAddEntry(): void {
     this.submitted = true;
     if (this.addForm.valid) {
-      this.gs.addNewEntry(this.addForm.value);
+      // this.gs.addNewEntry(this.addForm.value);
+      this.store.dispatch(addNewMessage({ guestBookMessage: this.addForm.value }));
       this.addForm.reset();
       this.submitted = false;
     }

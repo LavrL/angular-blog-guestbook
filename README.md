@@ -15,3 +15,4 @@ Demo - https://angular-blog-guestbook.netlify.app/
 * Reactive Forms Validation
 * Lazy Loading
 * Tests
+* NgRx
