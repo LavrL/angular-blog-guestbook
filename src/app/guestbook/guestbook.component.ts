@@ -21,7 +21,7 @@ export class GuestbookComponent implements OnInit {
   public ngOnInit(): void {
     this.addForm = this.fb.group({
       author: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(5)]]
+      message: ['', [Validators.required, Validators.minLength(20)]]
     });
   }
 
