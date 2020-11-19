@@ -33,7 +33,6 @@ export class BlogPostListComponent implements OnInit {
   public getDefaultField(): string { return this.searchFields[0].name; }
 
   public ngOnInit(): void {
-    this.blogService.getAllPosts().subscribe(s => console.log('All posts = ', s));
     this.blogAllPost$ = this.blogService.getAllPosts();
   }
 
