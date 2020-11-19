@@ -1,4 +1,4 @@
-import { BlogPost, starRatingColor } from '../shared/blog.model';
+import { BlogComment, BlogPost, starRatingColor } from '../shared/blog.model';
 import { BlogService } from '../shared/blog.service';
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -18,7 +18,7 @@ export class BlogPostComponent implements OnInit {
   @Input() public postImgAlt: string;
 
   public blogCommentNumberPerPost$: Observable<number>;
-  public blogComments$: Observable<BlogPost[]>;
+  public blogComments$: Observable<BlogComment[]>;
   public isShown = false;
   public rating = 2;
   public starCount = 8;

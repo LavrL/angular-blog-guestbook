@@ -1,4 +1,4 @@
-import { BlogPost } from '../shared/blog.model';
+import { BlogComment, BlogPost } from '../shared/blog.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -20,9 +20,9 @@ export class BlogService {
         return this.http.get<BlogPost>(this.baseURL + '/posts/' + id);
     }
 
-    public getCommentsById(id: string): Observable<BlogPost[]> {
-        return this.http.get<BlogPost[]>(this.baseURL + '/comments').pipe(
-            map((com: BlogPost[]) => com.filter(comment => comment.id === id))
+    public getCommentsById(id: string): Observable<BlogComment[]> {
+        return this.http.get<BlogComment[]>(this.baseURL + '/comments').pipe(
+            map((com: BlogComment[]) => com.filter(comment => comment.id === id))
         )
     }
 
