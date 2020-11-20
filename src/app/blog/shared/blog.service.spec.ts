@@ -23,14 +23,14 @@ describe('BlogService', () => {
         body: 'some texts go here'
     }];
     const dummyComment: BlogComment[] = [{
-        id: "1",
-        title: "Comment about Dogs",
-        body: "Dogs teach us a very important lesson in life: The mail man is not to be trusted!"
+        id: '1',
+        title: 'Comment about Dogs',
+        body: 'Dogs teach us a very important lesson in life: The mail man is not to be trusted!'
     },
     {
-        id: "2",
-        title: "Comment about Cats",
-        body: "Dogs have owners, cats have staff."
+        id: '2',
+        title: 'Comment about Cats',
+        body: 'Dogs have owners, cats have staff.'
     }]
 
     beforeEach(() => {

@@ -1,4 +1,4 @@
-import { Action, createReducer, on, createFeatureSelector } from '@ngrx/store';
+import { Action, createReducer, on, createFeatureSelector, ActionReducer } from '@ngrx/store';
 import { GuestBook } from './guestbook.model';
 import { addNewMessage } from './guestbook.action';
 
@@ -16,7 +16,7 @@ const _guestBookReducer = createReducer(
         ...state, guestBookMessages: [...state.guestBookMessages, action.guestBookMessage]
     }))
 );
-export function guestBookReducer(state = initialState, action: Action) {
+export function guestBookReducer(state = initialState, action: Action): GuestBookState {
     return _guestBookReducer(state, action);
 }
 
