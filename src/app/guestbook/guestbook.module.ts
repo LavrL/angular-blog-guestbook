@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
+import { guestBookReducer } from './shared/guestbook.reducer';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { NgModule } from '@angular/core';
     MatCardModule,
     MatDialogModule,
     ReactiveFormsModule,
-    GuestbookRoutingModule
+    GuestbookRoutingModule,
+    StoreModule.forFeature('guestBook', guestBookReducer),
   ],
   exports: [
     GuestbookComponent

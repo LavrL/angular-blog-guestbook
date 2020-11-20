@@ -1,7 +1,11 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { GuestBook } from '../shared/guestbook.model';
 import { GuestbookModalComponent } from '../guestbook-modal/guestbook-modal.component';
 import { GuestbookService } from '../shared/guestbook.service';
 import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { select, Store } from '@ngrx/store';
+import { selectGuestBookMessages } from '../shared/guestbook.selector';
 
 @Component({
   selector: 'app-guestbook-display-posts',
@@ -9,9 +13,9 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./guestbook-display-posts.component.scss']
 })
 export class GuestbookDisplayPostsComponent {
-  public guestBookPosts = this.gs.guestBook;
+  public guestBookPosts$: Observable<GuestBook[]> = this.store.pipe(select(selectGuestBookMessages));
 
-  constructor(public gs: GuestbookService, private dialog: MatDialog) { }
+  constructor(public gs: GuestbookService, private dialog: MatDialog, private store: Store<GuestBook>) { }
 
   public openModal(authorName: string): void {
     const dialogRef = this.dialog.open(GuestbookModalComponent,

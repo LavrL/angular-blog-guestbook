@@ -1,6 +1,6 @@
 # Angular Blog with Guestbook
 
-Demo netlify - https://angular-blog-guestbook.netlify.app/
+Demo - https://angular-blog-guestbook.netlify.app/
 
 ### Blog
 * Routing
@@ -13,3 +13,6 @@ Demo netlify - https://angular-blog-guestbook.netlify.app/
 * Routing
 * Modal Window
 * Reactive Forms Validation
+* Lazy Loading
+* Tests
+* NgRx

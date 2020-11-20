@@ -9,10 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { LayoutModule } from '../app/layout/layout.module';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-// import { environment } from '../environments/environment';
-// import { StoreModule } from '@ngrx/store';
-// import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
 // import { EffectsModule } from '@ngrx/effects';
 
 
@@ -29,7 +27,11 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     LayoutModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25 // Retains last 25 states
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

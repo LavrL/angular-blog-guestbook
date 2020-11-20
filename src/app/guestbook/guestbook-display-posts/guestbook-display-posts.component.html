@@ -1,6 +1,6 @@
-<ul *ngIf="guestBookPosts.length > 0">
+<ul *ngIf="(guestBookPosts$ | async).length > 0">
 
-    <li *ngFor="let guestBookPost of guestBookPosts" class="guestBook-post">
+    <li *ngFor="let guestBookPost of guestBookPosts$ | async" class="guestBook-post">
         <mat-card>
             <mat-card-content>Author: {{ guestBookPost.author }}
                 <button mat-stroked-button color="primary" (click)="openModal(guestBookPost.author)">More info...</button>

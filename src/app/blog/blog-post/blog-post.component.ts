@@ -34,7 +34,6 @@ export class BlogPostComponent implements OnInit {
     this.blogCommentNumberPerPost$ = this.blogService.getCommentNumberByPostId(this.postId);
     this.blogComments$ = this.blogService.getCommentsById(this.postId);
     this.onRatingChanged(this.rating);
-    console.log('postImgURL = ', this.postImgURL);
   }
 
   public showComments(): void {
